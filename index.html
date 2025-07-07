@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Digital Clock</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="timeZone">
+            <select class="form-select" aria-label="Select time zone">
+                <option value="Asia/Kolkata" selected>IST (India Standard Time)</option>
+                <option value="UTC">UTC (Coordinated Universal Time)</option>
+                <option value="America/New_York">EST (Eastern Time - US)</option>
+                <option value="America/Los_Angeles">PST (Pacific Time - US)</option>
+                <option value="Europe/London">GMT/BST (London)</option>
+                <option value="Europe/Paris">CET (Central European Time)</option>
+                <option value="Asia/Tokyo">JST (Japan Standard Time)</option>
+                <option value="Australia/Sydney">AEST (Australian Eastern Time)</option>
+            </select>
+        </div>
+
+
+        <div class="clock" >
+            <span id="hours">00</span>:
+            <span id="minutes">00</span>:
+            <span id="seconds">00</span>
+        </div>
+
+        <div class="toggleBtn">
+            <button id="toggleButton">Toggle theme</button>
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
 </body>
 </html>
