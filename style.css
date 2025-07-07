@@ -1,0 +1,131 @@
+/* .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+ */
+
+
+ /* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container styling */
+.container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Time zone dropdown */
+.timeZone select {
+  width: 200px;
+  padding: 10px 40px 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #e32828;
+  font-size: 16px;
+  appearance: none;
+  backdrop-filter: blur(10px);
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+.timeZone select:focus {
+  outline: none;
+  border: 2px solid #ffffff;
+}
+
+
+/* Clock display */
+.clock {
+  background: #000000;
+  color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-size: 48px;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+
+/* Toggle theme button */
+.toggleBtn button {
+  background: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.toggleBtn button:hover {
+  background: #0056b3;
+}
+
+.toggleBtn button:active {
+  transform: scale(0.98);
+}
+
+/* Dark theme styles */
+body.dark {
+  background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+  color: #ffffff;
+}
+
+body.dark .container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+}
+
+body.dark .timeZone select {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fe6a00;
+  border: 1px solid #555;
+  backdrop-filter: blur(10px);
+
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+
+  appearance: none;
+}
+
+
+body.dark .clock {
+  background: #ffffff;
+  color: #000000;
+}
+
+body.dark .toggleBtn button {
+  background: #ffffff;
+  color: #000000;
+}
+
+body.dark .toggleBtn button:hover {
+  background: #cccccc;
+}
