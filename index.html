@@ -7,10 +7,10 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="loadClock()">
     <div class="container">
         <div class="timeZone">
-            <select class="form-select" aria-label="Select time zone">
+            <select onchange="changeTimeZone()" id="selectedTimeZone" class="form-select" aria-label="Select time zone">
                 <option value="Asia/Kolkata" selected>IST (India Standard Time)</option>
                 <option value="UTC">UTC (Coordinated Universal Time)</option>
                 <option value="America/New_York">EST (Eastern Time - US)</option>
@@ -22,7 +22,6 @@
             </select>
         </div>
 
-
         <div class="clock" >
             <span id="hours">00</span>:
             <span id="minutes">00</span>:
@@ -30,12 +29,9 @@
         </div>
 
         <div class="toggleBtn">
-            <button id="toggleButton">Toggle theme</button>
+            <button onclick="toggleTheme()" id="toggleButton">Toggle theme</button>
         </div>
-
     </div>
-
-
 
     <script src="script.js"></script>
 </body>
